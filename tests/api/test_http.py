@@ -11,8 +11,6 @@ def test_second_request():
     r = requests.get("https://api.github.com/users/defunkt")
     body = r.json()
     headers = r.headers
-
-
     assert body['name'] == 'Chris Wanstrath'
     assert r.status_code == 200
     assert headers["Server"] == "GitHub.com"
